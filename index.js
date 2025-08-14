@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// serve static files (images live in the repo root)
+// serve static files (images in repo root)
 app.use(express.static('.'));
 
 // single page
@@ -34,7 +34,7 @@ app.get('/', (_req, res) => {
   figure{margin:10px 0}
   img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block}
   figcaption{font-size:12px;color:var(--muted);margin-top:6px}
-  .note{background:#eef2ff;border:1px solid #c7d2fe;color:#1e3a8a;padding:10px;border-radius:8px;margin-top:8px}
+  .note{background:#fff7ed;border:1px solid #fed7aa;color:#7c2d12;padding:10px;border-radius:8px;margin-top:8px}
   .cta{display:inline-block;margin-top:6px;padding:10px 12px;border-radius:10px;background:var(--brand);color:#fff;text-decoration:none}
   footer{color:var(--muted);text-align:center;font-size:12px;margin:18px 0}
 </style>
@@ -42,7 +42,7 @@ app.get('/', (_req, res) => {
 <body>
 <header class="wrap">
   <h1>Check-in Guide — Via della Scala 17</h1>
-  <div class="addr">Address: Via della Scala 17, Rome • Intercom: first column by the door (bottom button with white label)</div>
+  <div class="addr">Address: Via della Scala 17, Rome</div>
 </header>
 
 <main class="wrap">
@@ -55,7 +55,7 @@ app.get('/', (_req, res) => {
         <p>When you reach <b>Via della Scala 17</b>, you have arrived at your final destination.</p>
         <figure>
           <img src="building-door.jpg" alt="Building entrance — Via della Scala 17">
-          <figcaption>Main wooden entrance — Via della Scala 17.</figcaption>
+          <figcaption>Main entrance — Via della Scala 17.</figcaption>
         </figure>
       </div>
     </div>
@@ -66,11 +66,11 @@ app.get('/', (_req, res) => {
     <div class="step">
       <div class="num">2</div>
       <div>
-        <h2>Using the Entrance Intercom</h2>
-        <p>At the entrance, use the intercom in the <b>first column closest to the door</b>. Press the <b>bottom button</b> with the <b>white label</b>.</p>
+        <h2>Using the Intercom (outside)</h2>
+        <p>At the street entrance, ring the <b>first button from the bottom</b> on the row closest to the door — it has a <b>white label</b>.</p>
         <figure>
-          <img src="intercom-entrance.jpg" alt="Entrance intercom — bottom button with white label highlighted">
-          <figcaption>Entrance intercom — press the bottom button with the white label.</figcaption>
+          <img src="intercom-entrance.jpg" alt="Entrance intercom — press the first from the bottom with white label">
+          <figcaption>Entrance intercom — first from the bottom, white label.</figcaption>
         </figure>
       </div>
     </div>
@@ -82,7 +82,7 @@ app.get('/', (_req, res) => {
       <div class="num">3</div>
       <div>
         <h2>Second Intercom</h2>
-        <p>After you hear the click and enter the gate, use the <b>second intercom</b> inside and ring again.</p>
+        <p>Enter and ring the <b>second intercom</b> inside the building. After you hear the <b>click</b>, the door is unlocked — push to enter.</p>
       </div>
     </div>
   </section>
@@ -92,8 +92,12 @@ app.get('/', (_req, res) => {
     <div class="step">
       <div class="num">4</div>
       <div>
-        <h2>Entering the Building</h2>
-        <p>When you hear the click, <b>push the door</b> and go inside.</p>
+        <h2>Walk to the Apartment</h2>
+        <p>Walk straight, <b>follow the red arrow</b>, then turn <b>left</b>. You will see a <b>green door</b> — that is your apartment.</p>
+        <figure>
+          <img src="courtyard-arrow.jpg" alt="Walk straight then left following the red arrow">
+          <figcaption>Walk straight and turn left as shown.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -103,15 +107,10 @@ app.get('/', (_req, res) => {
     <div class="step">
       <div class="num">5</div>
       <div>
-        <h2>Inside the Courtyard</h2>
-        <p>Walk straight, <b>follow the red arrow</b>, then <b>turn left</b>. You will see a <b>green door</b> — that is your apartment.</p>
+        <h2>Green Door — Your Apartment</h2>
         <figure>
-          <img src="corridor-arrow.jpg" alt="Path with red arrow indicating where to turn left">
-          <figcaption>Walk straight, then turn left as shown by the arrow.</figcaption>
-        </figure>
-        <figure>
-          <img src="apartment-door.jpg" alt="Green apartment door inside the courtyard">
-          <figcaption>The green door is your apartment entrance.</figcaption>
+          <img src="apartment-green-door.jpg" alt="Green apartment door">
+          <figcaption>Green door — apartment entrance.</figcaption>
         </figure>
       </div>
     </div>
@@ -122,12 +121,12 @@ app.get('/', (_req, res) => {
     <div class="step">
       <div class="num">6</div>
       <div>
-        <h2>Getting the Keys & Entering</h2>
-        <p>Facing the green door, on the <b>left-hand side</b> you will see a bar with a <b>lockbox</b>.</p>
-        <div class="note">Combination: <b>6793</b>. Take the keys, <b>close the lockbox</b>, scramble the numbers, then use the <b>grey key</b> to open the door.</div>
+        <h2>Take the Keys from the Lockbox</h2>
+        <p>Looking at the green door, on the <b>left side</b> you’ll see a bar with the lockbox hanging.</p>
+        <p>Code is <b>6793</b>. Take the keys, <b>close the lockbox</b>, and <b>scramble the numbers</b>. Use the <b>grey key</b> to open the door.</p>
         <figure>
-          <img src="key-safe.jpg" alt="Lockbox with combination wheels">
-          <figcaption>Lockbox — use code 6793, then scramble the numbers after taking the key.</figcaption>
+          <img src="key-lockbox.jpg" alt="Lockbox with combination 6793">
+          <figcaption>Lockbox — code 6793. Close and mix numbers after use.</figcaption>
         </figure>
       </div>
     </div>
@@ -147,4 +146,4 @@ app.get('/', (_req, res) => {
 });
 
 const port = process.env.PORT || 8787;
-app.listen(port, () => console.log('Check-in guide running on http://localhost:'+port));
+app.listen(port, () => console.log('Check-in guide running on http://localhost:' + port));
