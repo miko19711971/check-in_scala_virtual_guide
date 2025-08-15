@@ -1,7 +1,14 @@
-{
-  "name": "check-in_scala_virtual_guide",
+ {
+  "name": "check-in-scala-multilang",
   "version": "1.0.0",
+  "description": "Multilingual check-in guide for Via della Scala 17",
+  "main": "index.js",
   "type": "module",
-  "scripts": { "start": "node index.js" },
-  "dependencies": { "cors": "2.8.5", "express": "4.19.2" }
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
 }
